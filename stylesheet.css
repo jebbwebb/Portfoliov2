@@ -90,6 +90,7 @@ h3 {
   position: relative;
   width: max-content;
   font-size: 5em;
+  color: white;
 }
 .landing-container h1::before,
 .landing-container h1::after {
@@ -121,23 +122,55 @@ h3 {
 }
 
 .landing-container h1::before {
-  background-color: aqua;
+  background-color: rgb(33, 33, 33);
   animation: typewriter 1s steps(40) forwards;
 }
 .landing-container h2::before {
-  background-color: aqua;
+  background-color: rgb(33, 33, 33);
 
   animation: typewriter 1s steps(40) forwards;
   animation-delay: 1s;
 }
 .landing-container h3::before {
-  background-color: aqua;
+  background-color: rgb(33, 33, 33);
   animation: typewriter 1s steps(40) forwards;
   animation-delay: 2s;
 }
+.landing-container h1::after {
+  width: 0.125em;
+  background-color: black;
+  animation: typewriter 1s steps(40) forwards, hidecaret 1s linear forwards;
+}
+.landing-container h2::after {
+  width: 0em;
+  background-color: black;
+
+  animation: showcaret 1s linear forwards, typewriter 1s steps(40) forwards,
+    hidecaret 1s linear forwards;
+  animation-delay: 1s;
+}
+.landing-container h3::after {
+  width: 0;
+  background-color: black;
+  animation: showcaret 1s linear forwards, typewriter 1s steps(40) forwards,
+    hidecaret 1s linear forwards;
+  animation-delay: 2s;
+}
+
 @keyframes typewriter {
   to {
     left: 100%;
+  }
+}
+
+@keyframes hidecaret {
+  100% {
+    width: 0;
+  }
+}
+@keyframes showcaret {
+  to {
+    width: 0.125em;
   }
 }
 

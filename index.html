@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Justin Webb</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
@@ -27,8 +30,8 @@
     <!--- Landing Section --->
     <div class="landing-container">
       <h1>Hello,</h1>
-      <h1>I'm Justin Webb</h1>
-      <h1>I'm a Frontend Web Developer</h1>
+      <h2>I'm Justin Webb</h2>
+      <h3>I'm a Frontend Web Developer</h3>
 
       <div class="logo-container">
         <img class="logo-1" src="images/htmllogo.png" />
@@ -37,14 +40,15 @@
         <img class="logo-4" src="images/reactlogo.png" />
       </div>
       <div class="landing-button">
-        <button>Resume</button>
+        <button class="btn-animate">Download My CV</button>
       </div>
     </div>
 
     <!--- About Me Section --->
     <div class="about-container">
       <div class="project-header">
-      <h1>ABOUT</h1>
+        
+      <h1><span>ABOUT</span></h1>
     </div>
    
       <div class="about-body">
@@ -84,18 +88,19 @@
 
     <!--- Project Section --->
     
-      <div class="project-header">
-      <h1>PROJECTS</h1>
-    </div>
+      
     <div class="project-container">
+      <div  class="project-header">
+        <span class="header-span"><h1>PROJECTS</h1></span>
+      </div>
       <div class="projects">
        
         <div class="image-container">
           <img src="images/formlogo.PNG">
         </div>
         <div class="project-desc">
-          <h1><span>Frontend</span></h1>
-          <h2><span>Multi-Step Form</span></h2>
+          <h1>Frontend</h1>
+          <h2>Multi-Step Form</h2>
           <div class="desc">
             A React app using Redux/Router. This app simulates a multi step form you may find in a subscription setup page for a website.
           </div>
@@ -118,8 +123,8 @@
           <img src="images/planetsitelogo.PNG">
         </div>
         <div class="project-desc">
-          <h1><span>Frontend</span></h1>
-          <h2><span>Planet Facts</span></h2>
+          <h1>Frontend</h1>
+          <h2>Planet Facts</h2>
           <div class="desc">
             Single Page Application built with Javascript and CSS. Toggles between different planets, images, information. Graphics provided by Frontend Mentor
           </div>
@@ -144,10 +149,10 @@
             <img src="images/redstoreprojectlogo.png">
           </div>
           <div class="project-desc">
-            <h1><span>Frontend</span></h1>
-            <h2><span>RedStore-Ecommerce Store</span></h2>
+            <h1>Frontend</h1>
+            <h2>RedStore-Ecommerce Store</h2>
             <div class="desc">
-              A Frontend Ecommerce store built using HTML/CSS/JS. Full shopping cart functionality. Just click Add To Cart to get started.
+              A Frontend Ecommerce store built using HTML/CSS/JSS. Full shopping cart functionality. Just click Add To Cart to get started.
             </div>
             <div class="tech-used">
             <h3>Javascript HTML CSS</h3>
@@ -165,8 +170,8 @@
 
             <!--- Contact --->
     <div class="contact-header">
-      <h1>Contact</h1>
-      <p>Thank you for taking the time to explore my portfolio.</p>
+      <span><h1>Contact</h1></span>
+      
     </div>
     <div class="contact-container">
       <form action="https://formsubmit.co/justinwebbmain@gmail.com" method="POST" >

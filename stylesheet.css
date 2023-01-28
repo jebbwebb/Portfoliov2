@@ -11,7 +11,7 @@
   justify-content: center;
 }
 .header h1 {
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 /* NAV SECTION */
@@ -83,6 +83,64 @@ nav {
   border-radius: 99px;
 }
 /* Landing-Section */
+.landing-container h1,
+h2,
+h3 {
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+  width: max-content;
+  font-size: 5em;
+}
+.landing-container h1::before,
+.landing-container h1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.landing-container h2::before,
+.landing-container h2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.landing-container h3::before,
+.landing-container h3::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.landing-container h1::before {
+  background-color: aqua;
+  animation: typewriter 1s steps(40) forwards;
+}
+.landing-container h2::before {
+  background-color: aqua;
+
+  animation: typewriter 1s steps(40) forwards;
+  animation-delay: 1s;
+}
+.landing-container h3::before {
+  background-color: aqua;
+  animation: typewriter 1s steps(40) forwards;
+  animation-delay: 2s;
+}
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
 .landing-container {
   padding-left: 10%;
   width: 100%;
@@ -97,10 +155,40 @@ nav {
   padding-top: 10px;
   padding-left: 10px;
 }
-.landing-container h1 {
-  font-size: 4rem;
+.landing-container button {
+  background-color: transparent;
+  outline: none;
   color: white;
+  font-size: 18px;
+  border: 2px solid rgb(199, 36, 177);
+  padding: 20px 25px;
+  border-radius: 7px;
+  position: relative;
+  margin-top: 30px;
+  width: 200px;
 }
+.btn-animate {
+  transition: color 300ms ease-in-out;
+  z-index: 1;
+}
+.btn-animate::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgb(199, 36, 177);
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.btn-animate:hover::before,
+.btn-animate:focus::before {
+  transform: scaleX(1);
+}
+
 .logo-container img {
   width: 50%;
 }
@@ -187,6 +275,12 @@ nav {
   align-items: center;
   margin-top: 20%;
 }
+
+.header-span {
+  display: inline-block;
+  border-bottom: 5px solid rgb(199, 36, 177);
+  padding-bottom: 20px;
+}
 .projects {
   margin-top: 200px;
   display: flex;
@@ -224,6 +318,7 @@ nav {
   width: 30px;
   height: 30px;
 }
+
 /* Contact */
 .contact-header {
   width: 100%;
@@ -245,7 +340,7 @@ form {
   flex-direction: column;
   align-items: center;
   padding: 5%;
-
+  gap: 8px;
   width: 800px;
 }
 form input,
@@ -263,6 +358,7 @@ input {
 input,
 textarea {
   background-color: rgb(51, 51, 51);
+  box-shadow: 1px 1px 10px black;
 }
 
 /* Media */

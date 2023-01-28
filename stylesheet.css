@@ -128,33 +128,35 @@ h3 {
 .landing-container h2::before {
   background-color: rgb(33, 33, 33);
 
-  animation: typewriter 1s steps(40) forwards;
-  animation-delay: 1s;
+  animation: typewriter 2s steps(40) forwards;
+  animation-delay: 1.2s;
 }
 .landing-container h3::before {
   background-color: rgb(33, 33, 33);
-  animation: typewriter 1s steps(40) forwards;
-  animation-delay: 2s;
+  animation: typewriter 2s steps(40) forwards;
+  animation-delay: 3.5s;
 }
 .landing-container h1::after {
   width: 0.125em;
   background-color: black;
-  animation: typewriter 1s steps(40) forwards, hidecaret 1s linear forwards;
+  animation: showblink 700ms steps(40) infinite,
+    typewriter 1s steps(40) forwards, hidecaret 1s linear forwards;
 }
 .landing-container h2::after {
   width: 0em;
   background-color: black;
 
-  animation: showcaret 1s linear forwards, typewriter 1s steps(40) forwards,
-    hidecaret 1s linear forwards;
+  animation: showcaret 1.6ms linear forwards, showblink 700ms steps(40) infinite,
+    typewriter 2.2s steps(150) forwards, hidecaret 3s linear forwards;
   animation-delay: 1s;
 }
 .landing-container h3::after {
   width: 0;
   background-color: black;
-  animation: showcaret 1s linear forwards, typewriter 1s steps(40) forwards,
-    hidecaret 1s linear forwards;
-  animation-delay: 2s;
+  animation: showcaret 15s linear forwards, typewriter 3.7s steps(60) forwards,
+    showblink 700ms steps(40) infinite;
+
+  animation-delay: 3s;
 }
 
 @keyframes typewriter {
@@ -171,6 +173,12 @@ h3 {
 @keyframes showcaret {
   to {
     width: 0.125em;
+  }
+}
+
+@keyframes showblink {
+  to {
+    background-color: transparent;
   }
 }
 

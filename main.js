@@ -1,6 +1,6 @@
-const heightOutput = document.querySelector('#height');
 const stickyNav = document.querySelector('.container');
 const hamburger = document.querySelector('.hamburger');
+
 console.log(stickyNav);
 hamburger.addEventListener('click', function () {
   this.classList.toggle('is-active');

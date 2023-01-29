@@ -19,10 +19,20 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .container img {
   width: 70px;
   border: 5px solid rgb(199, 36, 177);
   border-radius: 50%;
+}
+.header .sticky {
+  position: fixed;
+  top: 0;
+  background-color: rgb(33, 33, 33);
+  border-bottom: 3px solid rgb(199, 36, 177);
+  width: 100%;
+  z-index: 200;
+  box-sizing: border-box;
 }
 
 nav {
@@ -105,24 +115,27 @@ a:hover::after {
   transform-origin: left;
 }
 
-.menu:
-/* Landing-Section */ .landing-header {
+/* Landing-Section */
+.landing-header {
   font-family: 'Ubuntu', sans-serif;
   flex-direction: column;
-  font-size: 3em;
+  font-size: 5em;
   color: white;
   display: flex;
+}
+.landing-header span {
+  color: rgb(199, 36, 177);
 }
 
 .landing-container {
   padding-left: 10%;
   width: 80%;
-  padding-top: 2%;
+  padding-top: 10%;
 }
 .logo-container {
-  width: 125px;
   padding-top: 2%;
   display: flex;
+  width: 250px;
 }
 .landing-button {
   padding-top: 10px;
@@ -132,13 +145,15 @@ a:hover::after {
   background-color: transparent;
   outline: none;
   color: white;
-  font-size: 18px;
+  font-size: 25px;
   border: 2px solid rgb(199, 36, 177);
   padding: 20px 25px;
   border-radius: 7px;
   position: relative;
   margin-top: 30px;
-  width: 200px;
+  width: 300px;
+  height: 100px;
+  font-family: 'Ubuntu', sans-serif;
 }
 .btn-animate {
   transition: color 300ms ease-in-out;

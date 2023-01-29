@@ -412,6 +412,7 @@ h3 {
 .desc {
   font-family: 'Raleway', sans-serif;
   color: rgb(135, 144, 175);
+  font-size: 1em;
 }
 .desc span {
   background-color: rgb(48, 25, 52);
@@ -554,6 +555,11 @@ textarea {
 }
 
 /* Media */
+@media (max-width: 395px) {
+  .desc {
+    font-size: 1.25em;
+  }
+}
 @media (max-width: 462px) {
   .landing-header {
     font-size: 3em;

@@ -384,7 +384,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 500px;
+  margin-top: 300px;
 }
 
 .header-span {
@@ -462,7 +462,7 @@ h3 {
 /* Contact */
 .contact-header {
   width: 100%;
-  margin-top: 300px;
+  margin-top: 200px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -576,6 +576,12 @@ textarea {
 }
 
 @media (max-width: 1050px) {
+  .about-container {
+    padding-top: 5px;
+  }
+  .project-container {
+    justify-content: flex-start;
+  }
   .image-container {
     display: none;
   }

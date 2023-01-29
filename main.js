@@ -1,4 +1,5 @@
 const hamburger = document.querySelector('.hamburger');
-hamburger.addEventListener('click', function () {
-  this.classList.toggle('is-active');
-});
+const landingContainer = document.querySelector('.landing-header');
+
+console.log(landingContainer);
+console.log(widthOutput);

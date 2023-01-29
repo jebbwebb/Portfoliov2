@@ -10,9 +10,6 @@
   display: flex;
   justify-content: center;
 }
-.header h1 {
-  font-size: 1rem;
-}
 
 /* NAV SECTION */
 .container {
@@ -83,108 +80,17 @@ nav {
   border-radius: 99px;
 }
 /* Landing-Section */
-.landing-container h1,
-.landing-container h2,
-.landing-container h3 {
+.landing-header {
   font-family: 'Ubuntu', sans-serif;
-  position: relative;
-  width: max-content;
-  font-size: 5em;
+  flex-direction: column;
+  font-size: 3em;
   color: white;
-}
-.landing-container h1::before,
-.landing-container h1::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-.landing-container h2::before,
-.landing-container h2::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-
-.landing-container h3::before,
-.landing-container h3::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-
-.landing-container h1::before {
-  background-color: rgb(33, 33, 33);
-  animation: typewriter 1s steps(40) forwards;
-}
-.landing-container h2::before {
-  background-color: rgb(33, 33, 33);
-
-  animation: typewriter 2s steps(40) forwards;
-  animation-delay: 1.2s;
-}
-.landing-container h3::before {
-  background-color: rgb(33, 33, 33);
-  animation: typewriter 2s steps(40) forwards;
-  animation-delay: 3.5s;
-}
-.landing-container h1::after {
-  width: 0.125em;
-  background-color: black;
-  animation: showblink 700ms steps(40) infinite,
-    typewriter 1s steps(40) forwards, hidecaret 1s linear forwards;
-}
-.landing-container h2::after {
-  width: 0em;
-  background-color: black;
-
-  animation: showcaret 1.6ms linear forwards, showblink 700ms steps(40) infinite,
-    typewriter 2.2s steps(150) forwards, hidecaret 3s linear forwards;
-  animation-delay: 1s;
-}
-.landing-container h3::after {
-  width: 0;
-  background-color: black;
-  animation: showcaret 15s linear forwards, typewriter 3.7s steps(60) forwards,
-    showblink 700ms steps(40) infinite;
-
-  animation-delay: 3s;
-}
-
-@keyframes typewriter {
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes hidecaret {
-  100% {
-    width: 0;
-  }
-}
-@keyframes showcaret {
-  to {
-    width: 0.125em;
-  }
-}
-
-@keyframes showblink {
-  to {
-    background-color: transparent;
-  }
+  display: flex;
 }
 
 .landing-container {
   padding-left: 10%;
-  width: 100%;
+  width: 80%;
   padding-top: 2%;
 }
 .logo-container {
@@ -246,7 +152,8 @@ nav {
 .about-me {
   width: 100%;
   padding-top: 15%;
-
+  font-family: 'Raleway', sans-serif;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -278,6 +185,16 @@ nav {
   flex-direction: column;
   justify-content: center;
 }
+.tech-container h3 {
+  color: rgb(129, 138, 167);
+}
+.tech-container span {
+  color: rgb(199, 36, 177);
+}
+.project-header {
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+}
 
 .technologies {
   display: flex;
@@ -285,6 +202,8 @@ nav {
   align-items: center;
   padding-top: 4%;
   width: 75%;
+  color: rgb(129, 138, 167);
+  font-size: 1.5em;
 }
 .technologies p {
   padding-top: 10%;
@@ -329,11 +248,32 @@ nav {
   width: 950px;
   box-shadow: 1px 1px 10px black;
 }
+.projects h1 {
+  color: rgb(199, 36, 177);
+  font-family: 'Ubuntu', sans-serif;
+  padding-bottom: 15px;
+}
+.projects h2 {
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  padding-bottom: 15px;
+}
+.desc {
+  font-family: 'Raleway', sans-serif;
+  color: rgb(135, 144, 175);
+}
+.desc span {
+  background-color: rgb(48, 25, 52);
+  color: rgb(199, 36, 177);
+}
 .image-container {
   width: 100%;
+  height: 300px;
+  background-color: rebeccapurple;
 }
 .image-container img {
   width: 100%;
+  height: 300px;
 }
 .project-desc {
   display: flex;
@@ -344,7 +284,7 @@ nav {
   width: 100%;
 }
 .desc {
-  background-color: rebeccapurple;
+  background-color: rgb(48, 25, 52);
   height: 110px;
   padding-left: 5%;
   font-size: 1.5em;
@@ -356,8 +296,14 @@ nav {
   justify-content: flex-end;
 }
 .project-icon img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+}
+.tech-used {
+  color: rgb(130, 139, 168);
+  font-family: 'Spline Sans Mono', monospace;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* Contact */
@@ -368,6 +314,8 @@ nav {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
 }
 .contact-container {
   width: 100%;
@@ -383,6 +331,10 @@ form {
   padding: 5%;
   gap: 8px;
   width: 800px;
+}
+.contact-container h3 {
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
 }
 form input,
 form textarea {
@@ -403,6 +355,11 @@ textarea {
 }
 
 /* Media */
+@media (max-width: 462px) {
+  .landing-header {
+    font-size: 3em;
+  }
+}
 
 @media (min-width: 760px) {
   .hamburger {
@@ -432,7 +389,6 @@ textarea {
     height: 100%;
   }
   .about-me {
-    padding-left: 60px;
     padding-top: 2%;
   }
   .about-body img {

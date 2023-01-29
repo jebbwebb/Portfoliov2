@@ -123,8 +123,7 @@ nav {
   font-family: 'Ubuntu', sans-serif;
   font-size: 2em;
 }
-.mobile-nav a:hover {
-}
+
 .hamburger span {
   display: block;
   width: 33px;
@@ -195,9 +194,7 @@ a:hover::after {
   color: white;
   display: flex;
 }
-.landing-header h1,
-h2,
-h3 {
+.animate-h1 {
   transform: translateY(3rem);
   animation: fadeInUp 1s ease forwards;
   opacity: 0;

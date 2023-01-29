@@ -19,6 +19,12 @@
   align-items: center;
   justify-content: space-between;
 }
+.container img {
+  width: 70px;
+  border: 5px solid rgb(199, 36, 177);
+  border-radius: 50%;
+}
+
 nav {
   top: 0;
   left: 0;
@@ -72,15 +78,35 @@ nav {
   justify-content: end;
 }
 .menu a {
-  color: white;
+  color: rgb(199, 36, 177);
   margin: 0 16px;
   text-decoration: none;
   transition: 0.4s;
   padding: 8px 16px;
   border-radius: 99px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5em;
+  position: relative;
 }
-/* Landing-Section */
-.landing-header {
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: rgb(199, 36, 177);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease-in;
+}
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.menu:
+/* Landing-Section */ .landing-header {
   font-family: 'Ubuntu', sans-serif;
   flex-direction: column;
   font-size: 3em;
@@ -316,12 +342,18 @@ nav {
   align-items: center;
   color: white;
   font-family: 'Ubuntu', sans-serif;
+  background-color: rgb(37, 41, 51);
+  padding-top: 2%;
+}
+.contact-header h1 span {
+  background-color: rgb(37, 41, 51);
 }
 .contact-container {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(37, 41, 51);
 }
 form {
   display: flex;
@@ -331,6 +363,7 @@ form {
   padding: 5%;
   gap: 8px;
   width: 800px;
+  background-color: rgb(37, 41, 51);
 }
 .contact-container h3 {
   color: white;
@@ -352,6 +385,25 @@ input,
 textarea {
   background-color: rgb(51, 51, 51);
   box-shadow: 1px 1px 10px black;
+}
+
+/* Footer */
+.footer-container {
+  background-color: rgb(37, 41, 51);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.footer-container h1 {
+  background-color: rgb(37, 41, 51);
+}
+.footer-icons {
+  background-color: rgb(37, 41, 51);
+}
+.footer-icons img {
+  background-color: rgb(37, 41, 51);
 }
 
 /* Media */

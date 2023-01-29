@@ -4,7 +4,9 @@
   box-sizing: border-box;
   background-color: rgb(33, 33, 33);
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .header {
   width: 100%;
   display: flex;

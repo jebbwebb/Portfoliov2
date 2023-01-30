@@ -95,6 +95,7 @@ nav {
   outline: none;
   background: none;
   cursor: pointer;
+  color: rgb(199, 36, 177);
 }
 .mobile-nav {
   position: fixed;

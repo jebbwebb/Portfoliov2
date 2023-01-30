@@ -11,7 +11,6 @@ hamburger.addEventListener('click', function () {
 
 mobileLinks.forEach((element) =>
   element.addEventListener('click', () => {
-    console.log(mobileLinks);
     mobileNav.classList.remove('is-active');
     hamburger.classList.remove('is-active');
   })

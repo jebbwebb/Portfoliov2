@@ -308,6 +308,7 @@ a:hover::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 0.75em;
 }
 .about-container h2 {
   font-size: 1.5em;
@@ -334,6 +335,7 @@ a:hover::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 0.75em;
 }
 .tech-container h3 {
   color: rgb(129, 138, 167);
@@ -358,8 +360,7 @@ a:hover::after {
 .technologies p {
   padding-top: 10%;
 }
-.tech-1 {
-}
+
 .tech-2 {
   margin-left: 50px;
 }
@@ -437,9 +438,11 @@ a:hover::after {
 .desc {
   background-color: rgb(48, 25, 52);
   height: 110px;
+  padding-top: 15px;
   padding-bottom: 20px;
+  text-align: center;
   padding-right: 20px;
-  font-size: 1.5em;
+  font-size: 1.25em;
   padding-left: 20px;
 }
 .project-icon {
@@ -539,6 +542,7 @@ textarea {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  color: white;
 }
 .footer-container h1 {
   background-color: rgb(37, 41, 51);

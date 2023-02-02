@@ -453,14 +453,12 @@ a:hover::after {
   padding-bottom: 20px;
   text-align: center;
   padding-right: 20px;
-
-  padding-left: 20px;
-}
-.desc-tarkov {
   font-family: 'Raleway', sans-serif;
   color: rgb(135, 144, 175);
   font-size: 1.2em;
+  padding-left: 20px;
 }
+
 .desc-tarkov span {
   background-color: rgb(48, 25, 52);
   color: rgb(199, 36, 177);
@@ -610,6 +608,12 @@ textarea {
     display: none;
   }
 }
+@media (max-width: 920px) {
+  .desc-tarkov {
+    font-size: 1em;
+  }
+}
+
 @media (max-width: 1050px) {
   .about-body {
     flex-direction: column;

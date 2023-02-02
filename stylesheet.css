@@ -446,6 +446,26 @@ a:hover::after {
   font-size: 1.25em;
   padding-left: 20px;
 }
+.desc-tarkov {
+  background-color: rgb(48, 25, 52);
+  height: 110px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  text-align: center;
+  padding-right: 20px;
+
+  padding-left: 20px;
+}
+.desc-tarkov {
+  font-family: 'Raleway', sans-serif;
+  color: rgb(135, 144, 175);
+  font-size: 1.2em;
+}
+.desc-tarkov span {
+  background-color: rgb(48, 25, 52);
+  color: rgb(199, 36, 177);
+}
+
 .project-icon {
   width: 100%;
   display: flex;

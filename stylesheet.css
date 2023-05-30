@@ -7,6 +7,48 @@
 html {
   scroll-behavior: smooth;
 }
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  perspective: 1000px;
+  width: 100%;
+  height: 600px;
+  margin-top: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .header {
   width: 100%;
   display: flex;
@@ -226,6 +268,7 @@ a:hover::after {
 }
 .landing-container button {
   background-color: transparent;
+  cursor: pointer;
   outline: none;
   color: white;
   font-size: 2em;
@@ -398,86 +441,192 @@ a:hover::after {
   display: flex;
   justify-content: center;
   width: 950px;
-  box-shadow: 1px 1px 10px black;
 }
-.projects h1 {
-  color: rgb(199, 36, 177);
+.card-back {
+  max-width: 100%;
+  display: flex;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+}
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-info-button {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 200px;
+  height: 40px;
   font-family: 'Ubuntu', sans-serif;
-  padding-bottom: 15px;
+  background-color: rgb(188, 188, 192);
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-.projects h2 {
-  color: white;
-  font-family: 'Ubuntu', sans-serif;
-  padding-bottom: 15px;
+#yoyo {
+  background-color: rgb(188, 188, 192);
 }
-.desc {
-  font-family: 'Raleway', sans-serif;
-  color: rgb(135, 144, 175);
-  font-size: 1em;
+
+.card-front:hover .view-info-button {
+  opacity: 1;
 }
-.desc span {
+.card-front:hover {
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.5s ease;
+  transform: scale(1.05) translateZ(20px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-info {
   background-color: rgb(48, 25, 52);
-  color: rgb(199, 36, 177);
-}
-.image-container {
   width: 100%;
-  height: 300px;
-  background-color: rebeccapurple;
-}
-.image-container img {
-  width: 100%;
-  height: 300px;
-}
-.project-desc {
+  padding-left: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-
-  width: 100%;
-}
-.desc {
-  background-color: rgb(48, 25, 52);
-  height: 110px;
-  padding-top: 15px;
-  padding-bottom: 20px;
-  text-align: center;
-  padding-right: 20px;
-  font-size: 1.25em;
-  padding-left: 20px;
-}
-.desc-tarkov {
-  background-color: rgb(48, 25, 52);
-  height: 110px;
-  padding-top: 15px;
-  padding-bottom: 20px;
-  text-align: center;
-  padding-right: 20px;
-  font-family: 'Raleway', sans-serif;
-  color: rgb(135, 144, 175);
-  font-size: 1.2em;
-  padding-left: 20px;
-}
-
-.desc-tarkov span {
-  background-color: rgb(48, 25, 52);
-  color: rgb(199, 36, 177);
-}
-
-.project-icon {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-.project-icon img {
-  width: 40px;
-  height: 40px;
+  justify-content: space-around;
 }
 .tech-used {
-  color: rgb(130, 139, 168);
-  font-family: 'Spline Sans Mono', monospace;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  width: 100%;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(48, 25, 52);
+}
+.tech-used p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: rgb(199, 36, 177);
+  width: 500px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-left: 20px;
+  color: rgb(188, 188, 192);
+  font-size: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+.project-desc {
+  background-color: rgb(48, 25, 52);
+  height: 200px;
+  color: #cccccc;
+  line-height: 40px;
+  padding-right: 20px;
+  overflow-y: scroll;
+  font-size: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+}
+.project-title {
+  width: 100%;
+  background-color: rgb(48, 25, 52);
+}
+.project-title h3 {
+  color: rgb(199, 36, 177);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2em;
+}
+.project-title h2 {
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 80px;
+  font-size: 3rem;
+}
+.project-title h2,
+.project-title h3 {
+  background-color: rgb(48, 25, 52);
+}
+.about h2 {
+  background-color: rgb(48, 25, 52);
+  color: rgb(199, 36, 177);
+  font-family: 'Ubuntu', sans-serif;
+}
+#yo {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.yo:hover {
+  animation: button1HoverAnim 1s infinite;
+}
+@keyframes button1HoverAnim {
+  /* Animation keyframes for button 1 hover */
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.project-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-right: 50px;
+  background-color: rgb(48, 25, 52);
+  cursor: pointer;
+}
+.project-buttons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  background-color: rgb(188, 188, 192);
+  color: black;
+}
+
+.project-buttons button {
+  width: 100px;
+  height: 40px;
+  margin-left: 50px;
+  background-color: rgb(188, 188, 192);
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-desc::-webkit-scrollbar {
+  width: 10px; /* width of the scrollbar */
+}
+
+.project-desc::-webkit-scrollbar-thumb {
+  background-color: rgb(199, 36, 177); /* color of the thumb */
+  border-radius: 4px; /* roundness of the thumb */
+}
+
+.project-desc::-webkit-scrollbar-thumb:hover {
+  background-color: #555555; /* color of the thumb on hover */
+}
+
+.project-desc::-webkit-scrollbar-track {
+  background-color: #f2f2f2; /* color of the track */
+  border-radius: 4px; /* roundness of the track */
 }
 
 /* Contact */
@@ -610,6 +759,26 @@ textarea {
 }
 
 @media (max-width: 1050px) {
+  .card {
+    transition: none;
+  }
+  .card-front {
+    display: none;
+    backface-visibility: none;
+    transform: none;
+  }
+  .card-flipped {
+    transform: none;
+  }
+  .card.flipped {
+    transform: none;
+  }
+  .card-back {
+    transform: initial;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 700px;
+  }
   .about-body {
     flex-direction: column;
     justify-content: center;
@@ -617,7 +786,14 @@ textarea {
     width: 100%;
   }
   .projects {
-    width: 50%;
+    width: 90%;
+  }
+  .project-desc {
+    padding-right: 10px;
+    padding-left: 5px;
+  }
+  .project-desc::-webkit-scrollbar {
+    width: 5px; /* width of the scrollbar */
   }
   .desc {
     width: 100%;
@@ -655,14 +831,37 @@ textarea {
     font-size: 1.5em;
   }
 }
-@media (max-width: 920px) {
-  .projects {
-    width: 80%;
-  }
-}
+
 @media (max-width: 590px) {
   .desc-tarkov {
     font-size: 1em;
     padding-top: 0px;
+  }
+  .tech-used {
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+  }
+  .tech-used p {
+    width: 60%;
+    margin-top: 10px;
+  }
+  .project-info {
+    align-items: center;
+  }
+  .project-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about {
+    margin-top: 20px;
+  }
+  .project-buttons {
+    justify-content: center;
+  }
+  .project-title h2 {
+    font-size: 2em;
   }
 }

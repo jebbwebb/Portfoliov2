@@ -9,10 +9,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
  
       <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" href="favicon.ico" />
     </head>
-  </head>
+ 
   <body>
     <nav>
       <header class="header">
@@ -47,7 +51,7 @@
       <div class="landing-header from-animate">
       <h1 class="animate-h1" id="hub-animate-1">Hello,</h1>
       <h2 class="animate-h1" id="hub-animate-2">I'm <span>Justin Webb</span></h2>
-      <h3 class="animate-h1" id="hub-animate-3">I'm a <span>Web</span>  Developer</h3>
+      <h3 class="animate-h1" id="hub-animate-3">I'm a <span>Full Stack</span> Web  Developer</h3>
     </div>
       
 
@@ -113,133 +117,165 @@
     
       
     <div id="project-container" class="project-container">
-      <div  class="project-header">
+      <div class="project-header">
         <span class="header-span"><h1>PROJECTS</h1></span>
       </div>
       <div class="projects">
-       
-        <div class="image-container">
-          <img src="images/audiologo.PNG">
-        </div>
-        <div class="project-desc">
-          <h1>Frontend</h1>
-          <h2>Audiophile</h2>
-          <div class="desc">
-            A <span>Frontend Ecommerce store</span> built using <span>React/Redux/Router</span>. Full shopping cart functionality. Just click <span>Add To Cart</span> to get started.
-          </div>
-          <div class="tech-used">
-          <h3>React/CSS</h3>
-        </div>
-          <div class="project-icon">
-            <a target="_blank" href="https://verdant-sunshine-966686.netlify.app/"> <img src="images/demologo.png"></a>
-            <a target="_blank" href="https://github.com/jebbwebb/Audiophile"><img src="images/githublogo.png"></a> 
-            
-          
-        </div>
-          
-        </div>
-      </div>
-      <div class="projects">
-       
-        <div class="image-container">
-          <img src="images/formlogo.PNG">
-        </div>
-        <div class="project-desc">
-          <h1>Frontend</h1>
-          <h2>Multi-Step Form</h2>
-          <div class="desc">
-            A <span>React App</span> using <span>Redux/Router</span>. This app simulates a multi step form you may find on a subscription setup page for a website.
-          </div>
-          <div class="tech-used">
-          <h3>React  CSS</h3>
-        </div>
-          <div class="project-icon">
-           <a target="_blank" href="https://jebbwebb.github.io/multi-form-setup/#/yourinfo"> <img src="images/demologo.png"></a>
-           <a  target="_blank" href="https://github.com/jebbwebb/multi-form-setup"><img src="images/githublogo.png"></a> 
-            
-          
-        </div>
-          
-        </div>
-        
-      </div>
-      <div class="projects">
-       
-        <div class="image-container">
-          <img src="images/planetsitelogo.PNG">
-        </div>
-        <div class="project-desc">
-          <h1>Frontend</h1>
-          <h2>Planet Facts</h2>
-          <div class="desc">
-            <span>Single Page Application</span> built with <span>Javascript and CSS</span>. Toggles between different planets, images, information. Graphics provided by Frontend Mentor
-          </div>
-          <div class="tech-used">
-          <h3>Javascript HTML CSS</h3>
-        </div>
-          <div class="project-icon">
-            <a target="_blank" href="https://jebbwebb.github.io/planet-facts-site/"> <img src="images/demologo.png"></a>
-              <a target="_blank" href="https://github.com/jebbwebb/planet-facts-site"><img src="images/githublogo.png"></a> 
-            
-          
-        </div>
-          
-        </div>
-        
-     
-          
-        </div>
-         
-        <div class="projects">
-       
-          <div class="image-container">
-            <img src="images/portlogo.PNG">
-          </div>
-          <div class="project-desc">
-            <h1>Frontend/AI</h1>
-            <h2>AI Product Page</h2>
-            <div class="desc">
-              An <span>Advertisment/Product Page  </span>that I designed  myself  using <span>Midjourney</span> AI image generator and <span>Photoshop</span>.  All text prompts were created using <span>ChaptGPT</span>.
+        <div class="card">
+          <div class="card-front">
+            <div class="image-overlay">
+              <img src="images/sc2buildlab.PNG" alt="Audiophile Project" class="project-image" />
+              <button class="view-info-button"><i id="yoyo" class="fa-solid fa-eye fa-beat"></i>  &nbsp VIEW PROJECT</button>
             </div>
-            <div class="tech-used">
-            <h3>Javascript HTML CSS  Midjourney Photoshop</h3>
+           
+            
           </div>
-            <div class="project-icon">
-              <a target="_blank" href="https://heroic-sawine-1f4960.netlify.app/index.html"> <img src="images/demologo.png"></a>
-              <a target="_blank" href="https://github.com/jebbwebb/crownwatch-AI"><img src="images/githublogo.png"></a> 
+          <div class="card-back">
+           
+           <div class="project-info">
+             
+             <div class="project-title"><h3 >PROJECT</h3> <h2>SC2 Builds Lab</h2></div>
+              <div class="tech-used"><p>NodeJs/Express/Mongo</p><p>CSS</p><p>HTML/EJS</p></div>
+              <div class="about"><h2>ABOUT</h2></div>
+              <div class="project-desc">
+                This comprehensive project enables users to craft their own builds for the game Starcraft 2 and exchange them with fellow users. To begin, users need to register an account in order to unlock the site's features. Once registered, they gain the ability to create builds, browse public builds, rate and comment on builds created by other users. I encourage you to explore the signup form, but for your convenience, I have provided demo login credentials:
+                <br>
+                Username: jebb1234
+                <br>
+                Password: 12345
+              </div>
+              <div class="project-buttons">
               
-            
-          </div>
-            
-          </div>
-        </div>  
-
-
-        
-        <div class="projects">
-       
-          <div class="image-container">
-            <img src="images/scav.PNG">
-          </div>
-          <div class="project-desc">
-            <h1>In-Progress</h1>
-            <h2>The Friendly Scav</h2>
-            <div class="desc-tarkov">
-              A <span>Passion Project</span> currently built using <span>HTML/BootStrap/React</span>. Using a free api made for the video game Escape from Tarkov. Click the github icon in the lower right to view the  <span>ReadMe</span>.
+                <button>
+                  <a class="yo" target="_blank" href=https://sc2buildlabs.herokuapp.com/builds>
+                  <i id="yo" class="fa-solid fa-eye"></i> 
+                  &nbsp DEMO
+                </a>
+                </button>
+             
+                <button>
+                  <a class="yo" target="_blank" href="https://github.com/jebbwebb/SC2BuildLab"><i id="yo" class="fa-solid fa-code"></i>&nbsp CODE</a></button>
+              </div>
+           </div>
+               
+             
+               
+              </div>
             </div>
-            <div class="tech-used">
-            <h3>React BootStrap</h3>
+            <div class="card">
+              <div class="card-front">
+                <div class="image-overlay">
+                  <img src="images/audiologo.png" alt="Audiophile Project" class="project-image" />
+                  <button class="view-info-button"><i id="yoyo" class="fa-solid fa-eye fa-beat"></i>  &nbsp VIEW PROJECT</button>
+                </div>
+               
+                
+              </div>
+              <div class="card-back">
+               
+               <div class="project-info">
+                 
+                 <div class="project-title"><h3 >PROJECT</h3> <h2>AUDIOPHILE</h2></div>
+                  <div class="tech-used"><p>React/Redux/Router</p><p>CSS</p><p>Photoshop</p></div>
+                  <div class="about"><h2>ABOUT</h2></div>
+                  <div class="project-desc">This e-commerce store offers a complete shopping cart experience. To begin, simply click on the "Add To Cart" button!<br><br> The project was developed using React, Redux, and React Router. Redux was utilized to manage the shopping cart's state, while a custom hook was implemented to handle the state of the cart dropdown. React Router was employed for page routing, and CSS was used for styling throughout the entire project.<br><br> Initially, this project presented an immense challenge, pushing me to overcome one of the major hurdles I've encountered in my coding journey. Working with images in CSS had always been a struggle for me, and given the abundance of images on the website, I knew I had my work cut out for me. However, upon completing this project, I discovered a newfound fascination with the creative possibilities CSS offers, far beyond what most would typically associate it with. It has given me an appreciation for CSS as an art form, rather than merely a tool.
+                  </div>
+                  <div class="project-buttons">
+                  
+                    <button>
+                      <a class="yo" target="_blank" href="https://verdant-sunshine-966686.netlify.app/">
+                      <i id="yo" class="fa-solid fa-eye"></i> 
+                      &nbsp DEMO
+                    </a>
+                    </button>
+                 
+                    <button>
+                      <a class="yo" target="_blank" href="https://github.com/jebbwebb/Audiophile"><i id="yo" class="fa-solid fa-code"></i>&nbsp CODE</a></button>
+                  </div>
+               </div>
+                   
+                 
+                   
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-front">
+                    <div class="image-overlay">
+                      <img src="images/portlogo.PNG" alt="Audiophile Project" class="project-image" />
+                      <button class="view-info-button"><i id="yoyo" class="fa-solid fa-eye fa-beat"></i>  &nbsp VIEW PROJECT</button>
+                    </div>
+                   
+                    
+                  </div>
+                  <div class="card-back">
+                   
+                   <div class="project-info">
+                     
+                     <div class="project-title"><h3 >PROJECT</h3> <h2>AI Product Page</h2></div>
+                      <div class="tech-used"><p>HTML/CSS</p><p>Javascript</p><p>Photoshop</p><p>Midjourney</p></div>
+                      <div class="about"><h2>ABOUT</h2></div>
+                      <div class="project-desc">An Advertisment/Product Page that I designed myself using Midjourney AI image generator and Photoshop. All text prompts were created using ChaptGPT.<br><br> This project proved to be an immensely enjoyable experience. Moreover, it introduced me to the remarkable potential of AI in assisting with my work, revolutionizing my approach to research and problem-solving. Additionally, delving into the realm of image editing with Photoshop for the first time brought immense satisfaction, as I successfully attained remarkable results beyond my expectations.
+                      </div>
+                      <div class="project-buttons">
+                      
+                        <button>
+                          <a class="yo" target="_blank" href="https://heroic-sawine-1f4960.netlify.app/index.html">
+                          <i id="yo" class="fa-solid fa-eye"></i> 
+                          &nbsp DEMO
+                        </a>
+                        </button>
+                     
+                        <button>
+                          <a class="yo" target="_blank" href="https://github.com/jebbwebb/crownwatch-AI"><i id="yo" class="fa-solid fa-code"></i>&nbsp CODE</a></button>
+                      </div>
+                   </div>
+                       
+                     
+                       
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-front">
+                        <div class="image-overlay">
+                          <img src="images/scav.PNG" alt="Audiophile Project" class="project-image" />
+                          <button class="view-info-button"><i id="yoyo" class="fa-solid fa-eye fa-beat"></i>  &nbsp VIEW PROJECT</button>
+                        </div>
+                       
+                        
+                      </div>
+                      <div class="card-back">
+                       
+                       <div class="project-info">
+                         
+                         <div class="project-title"><h3 >PROJECT</h3> <h2>The Friendly Scav</h2></div>
+                          <div class="tech-used"><p>React</p><p>CSS/Bootstrap</p><p>GraphQL API</p></div>
+                          <div class="about"><h2>ABOUT</h2></div>
+                          <div class="project-desc"> An extraordinary  project currently under development using HTML, Bootstrap, and React. Designed to be a comprehensive hub for all information related to the popular video game, Escape from Tarkov, this project harnesses the power of a dedicated API. Its primary objective is to provide users with a centralized platform where they can effortlessly access the desired game-related information without the need to navigate multiple websites. For a deeper understanding of the project's features and functionalities, click on the GitHub icon positioned in the lower right corner, granting access to the detailed ReadMe documentation.
+                          </div>
+                          <div class="project-buttons">
+                          
+                            <button>
+                              <a class="yo" target="_blank" href="https://jebbwebb.github.io/The-Friendly-Scav/">
+                              <i id="yo" class="fa-solid fa-eye"></i> 
+                              &nbsp DEMO
+                            </a>
+                            </button>
+                         
+                            <button>
+                              <a class="yo" target="_blank" href="https://github.com/jebbwebb/The-Friendly-Scav"><i id="yo" class="fa-solid fa-code"></i>&nbsp CODE</a></button>
+                          </div>
+                       </div>
+                           
+                         
+                           
+                          </div>
+                        </div>
           </div>
-            <div class="project-icon">
-              <a target="_blank" href="https://jebbwebb.github.io/The-Friendly-Scav/"> <img src="images/demologo.png"></a>
-              <a target="_blank" href="https://github.com/jebbwebb/The-Friendly-Scav"><img src="images/githublogo.png"></a> 
-              
-            
-          </div>
-            
-          </div>
-        </div> 
+        </div>
         
+      </div>
+    
+    </div>
         
       
 

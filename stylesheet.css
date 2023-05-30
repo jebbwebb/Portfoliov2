@@ -823,6 +823,7 @@ textarea {
 }
 @media (max-width: 560px) {
   .card {
+    margin-bottom: 200px;
     margin-top: 50px;
   }
   .logo-container {

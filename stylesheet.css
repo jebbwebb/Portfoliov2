@@ -14,10 +14,11 @@ html {
 }
 
 .card {
+  margin-top: 100px;
   perspective: 1000px;
   width: 100%;
   height: 600px;
-  margin-top: 200px;
+  margin-bottom: 100px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.8s;
@@ -437,7 +438,6 @@ a:hover::after {
   padding-bottom: 20px;
 }
 .projects {
-  margin-top: 200px;
   display: flex;
   justify-content: center;
   width: 950px;
@@ -822,6 +822,9 @@ textarea {
   }
 }
 @media (max-width: 560px) {
+  .card {
+    margin-top: 50px;
+  }
   .logo-container {
     width: 150px;
   }

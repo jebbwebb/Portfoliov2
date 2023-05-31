@@ -84,6 +84,11 @@ html {
   transform: translateY(3rem);
   animation: fadeInUp 1s ease 2s forwards;
 }
+.logo-5 {
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 1s ease 2.25s forwards;
+}
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -354,6 +359,7 @@ a:hover::after {
   justify-content: center;
   align-items: center;
   font-size: 0.75em;
+  line-height: 30px;
 }
 .about-container h2 {
   font-size: 1.5em;
